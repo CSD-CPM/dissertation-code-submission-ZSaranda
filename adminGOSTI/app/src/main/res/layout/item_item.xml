@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!-- MAIN CARD -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewRoot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <!-- IMAGE -->
+            <ImageView
+                android:id="@+id/foodImageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- NAME -->
+            <TextView
+                android:id="@+id/foodNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Food Name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toEndOf="@id/foodImageView"
+                app:layout_constraintTop_toTopOf="@id/foodImageView" />
+
+            <!-- PRICE -->
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$35"
+                android:textColor="@color/textColor1"
+                android:textSize="18sp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="@id/foodNameTextView"
+                app:layout_constraintBottom_toBottomOf="@id/foodImageView" />
+
+            <!-- PLUS -->
+            <ImageButton
+                android:id="@+id/pluseButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/plus"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- MINUS -->
+            <ImageButton
+                android:id="@+id/minusButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/minus"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@id/pluseButton"
+                app:layout_constraintTop_toTopOf="@id/pluseButton" />
+
+
+
+            <!-- DELETE -->
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/trash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
